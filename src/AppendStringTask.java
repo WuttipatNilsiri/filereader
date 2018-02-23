@@ -1,20 +1,27 @@
-
+/**
+ * AppendStringTask parent class for String Reading classes
+ * @author Wuttipat Nilsiri
+ *
+ */
 public class AppendStringTask implements Runnable {
-	String filename;
-	
+	String filename = "";
+	String result = "";
+	/**
+	 * initial task with file
+	 * @param filename
+	 */
 	AppendStringTask(String filename){
 		this.filename = filename;
 	}
-	
-	String readFile(){
-		return filename;
-	}
-	
-	public void run(){
-		readFile();
-	}
-	
+	/**
+	 * to know task detail
+	 */
 	public String toString(){
-		return readFile();
+		return filename+" "+getClass().getSimpleName()+" size: "+result.length()+" char";
+	}
+	
+	@Override
+	public void run() {
+		//plz do it sub class 
 	}
 }

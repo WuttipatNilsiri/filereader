@@ -3,6 +3,11 @@ import java.io.*;
 import java.util.Scanner;
 
 public class ReadFile {
+	/**
+	 * Read File and append to String 
+	 * @param filename
+	 * @return String in that file
+	 */
 	public static String readFileToString(String filename){
 		File file = new File(filename);
 		String string = "";
@@ -25,7 +30,11 @@ public class ReadFile {
 		}
 		return string;
 	}
-	
+	/**
+	 * Read File and append to StringBuilder
+	 * @param filename
+	 * @return String in that file
+	 */
 	public static String readFileToStringBuilder(String filename){
 		File file = new File(filename);
 		StringBuilder string = new StringBuilder();
@@ -48,7 +57,11 @@ public class ReadFile {
 		}
 		return string.toString();
 	}
-	
+	/**
+	 * Read File by BufferedReader and append to String
+	 * @param filename
+	 * @return String in that file
+	 */
 	public static String readFileBuffered(String filename){
 		BufferedReader s = null;
 		String init = "";
